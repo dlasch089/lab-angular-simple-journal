@@ -4,6 +4,7 @@
 
 <ul>
   <li *ngFor="let journalEntry of journalEntryList">
-    {{journalEntry.title}} // {{journalEntry.date | date:'medium'}}
+    <a [routerLink]="['/home', journalEntry._id]">{{journalEntry.title}}</a>// {{journalEntry.date | date:'medium'}}
+
   </li>
 </ul>

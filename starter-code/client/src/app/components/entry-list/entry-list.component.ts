@@ -12,7 +12,6 @@ import { JournalEntry } from '../../models/journalEntry';
 })
 export class EntryListComponent implements OnInit {
   journalEntryList: JournalEntry[];
-  journalEntry: JournalEntry;
 
   constructor(private theJournalEntriesService: JournalEntriesService) { }
 

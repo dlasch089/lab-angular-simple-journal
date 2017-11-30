@@ -1,5 +1,5 @@
 export class JournalEntry {
-  _id: number;
+  _id: string;
   title: string;
   content: string;
   date: Date;

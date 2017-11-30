@@ -15,8 +15,8 @@ export class JournalEntriesService {
     .map((res: Response) => res.json());
   }
 
-  getJournalEntry(id) {
-    return this.http.get(this.baseUrl + '/api/journal-entries/:id')
-    .map((res) => res.json());
+  getSingleEntry(id) {
+    return this.http.get(this.baseUrl + `/api/journal-entries/${id}`)
+    .map(res => res.json());
   }
 }

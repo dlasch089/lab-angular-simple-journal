@@ -9,16 +9,19 @@ import { AppComponent } from './app.component';
 import { JournalEntriesService } from './services/journal-entries.service';
 
 import { EntryListComponent } from './components/entry-list/entry-list.component';
+import { SingleEntryComponent } from './components/single-entry/single-entry.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: EntryListComponent },
+  { path: 'home/:id', component: SingleEntryComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryListComponent
+    EntryListComponent,
+    SingleEntryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+<h1>
+  All Journal Entries
+</h1>
+
+<ul>
+  <li *ngFor="let journalEntry of journalEntryList">
+    {{journalEntry.title}} // {{journalEntry.date | date:'medium'}}
+  </li>
+</ul>

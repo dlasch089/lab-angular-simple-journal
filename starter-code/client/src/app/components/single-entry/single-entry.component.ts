@@ -21,5 +21,4 @@ export class SingleEntryComponent implements OnInit {
       .subscribe(journalEntry => this.journalEntry = journalEntry);
     });
   }
-
 }

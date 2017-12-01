@@ -1,3 +1,4 @@
+// starting-point in an app created from someone else (except the models)
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -5,10 +6,10 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-
+// created services
 import { JournalEntriesService } from './services/journal-entries.service';
-
-import { EntryListComponent } from './components/entry-list/entry-list.component';
+// created components
+import { EntryListComponent } from './components/entry-list/entry-list.component'; // should be page-components!
 import { SingleEntryComponent } from './components/single-entry/single-entry.component';
 
 const appRoutes: Routes = [
@@ -18,16 +19,16 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
+  declarations: [ // nice overview of the components
     AppComponent,
     EntryListComponent,
     SingleEntryComponent
   ],
-  imports: [
+  imports: [ // nice overview of the used modules 
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes) // defined above 
   ],
   providers: [
     JournalEntriesService

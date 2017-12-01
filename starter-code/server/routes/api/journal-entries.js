@@ -25,10 +25,10 @@ router.post('/journal-entries', (req, res, next) => {
     content: req.body.content
   });
 
-  newEntry.save( (err) => {
-    if (err)             { return res.status(500).json(err) }
-    if (newEntry.errors) { return res.status(400).json(newEntry) }
-                           return res.json(newEntry);
+  newEntry.save( (err) => { // promises could be used also
+    if (err) { return res.status(500).json(err) } // early return instead of an else
+    if (newEntry.errors) { return res.status(400).json(newEntry) } // errors in the model
+      return res.json(newEntry); // default status: 200, we do not need to specify
   });
 });
 
